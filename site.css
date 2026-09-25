@@ -1,16 +1,22 @@
 /* R7 Software - shared site styles */
 :root {
-  --bg: #0b0b0d;
-  --bg-elevated: #121216;
-  --bg-soft: #16161b;
-  --border: rgba(255, 255, 255, 0.1);
-  --border-strong: rgba(255, 255, 255, 0.16);
+  /* Disc gray from R7 mark (cool steel charcoal) */
+  --disc-deep: #14181e;
+  --disc-mid: #232930;
+  --disc-lift: #2b323a;
+  --disc-edge: #3a4450;
+  --bg: #0e1218;
+  --bg-elevated: #1a1f27;
+  --bg-soft: #232930;
+  --bg-gradient: radial-gradient(120% 80% at 50% -10%, #2b323a 0%, #1a1f27 42%, #0e1218 78%);
+  --border: rgba(180, 200, 220, 0.12);
+  --border-strong: rgba(180, 200, 220, 0.2);
   --text: #ececf1;
-  --text-muted: #9a9aa8;
-  --text-dim: #6e6e7a;
+  --text-muted: #9aa3b0;
+  --text-dim: #6e7684;
   --accent: #e8b84a;
   --accent-hover: #f0c96a;
-  --accent-ink: #0b0b0d;
+  --accent-ink: #0e1218;
   --radius: 12px;
   --max: 1080px;
   --font: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -27,7 +33,9 @@ body {
   min-height: 100vh;
   font: 16px/1.55 var(--font);
   color: var(--text);
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -51,7 +59,7 @@ a:hover { color: var(--accent-hover); }
   top: 0;
   z-index: 40;
   backdrop-filter: blur(12px);
-  background: rgba(11, 11, 13, 0.85);
+  background: rgba(14, 18, 24, 0.88);
   border-bottom: 1px solid var(--border);
 }
 
