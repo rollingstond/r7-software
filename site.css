@@ -1,14 +1,16 @@
 /* R7 Software - shared site styles */
 :root {
-  /* Disc gray from R7 mark (cool steel charcoal) */
+  /* Disc gray from R7 mark (cool steel charcoal) — page wash is the star */
   --disc-deep: #14181e;
   --disc-mid: #232930;
-  --disc-lift: #2b323a;
+  --disc-lift: #2f3842;
   --disc-edge: #3a4450;
-  --bg: #0e1218;
-  --bg-elevated: #1a1f27;
-  --bg-soft: #232930;
-  --bg-gradient: radial-gradient(120% 80% at 50% -10%, #2b323a 0%, #1a1f27 42%, #0e1218 78%);
+  --bg: #1a1f26;
+  --bg-elevated: #262d36;
+  --bg-soft: #2f3842;
+  --bg-gradient:
+    radial-gradient(90% 60% at 50% -5%, #3a4450 0%, transparent 55%),
+    linear-gradient(180deg, #2a313a 0%, #1f252d 42%, #161b22 100%);
   --border: rgba(180, 200, 220, 0.12);
   --border-strong: rgba(180, 200, 220, 0.2);
   --text: #ececf1;
@@ -16,7 +18,7 @@
   --text-dim: #6e7684;
   --accent: #e8b84a;
   --accent-hover: #f0c96a;
-  --accent-ink: #0e1218;
+  --accent-ink: #14181e;
   --radius: 12px;
   --max: 1080px;
   --font: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -26,7 +28,10 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+}
 
 body {
   margin: 0;
@@ -59,7 +64,7 @@ a:hover { color: var(--accent-hover); }
   top: 0;
   z-index: 40;
   backdrop-filter: blur(12px);
-  background: rgba(14, 18, 24, 0.88);
+  background: rgba(26, 31, 38, 0.9);
   border-bottom: 1px solid var(--border);
 }
 
