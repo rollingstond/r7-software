@@ -4,158 +4,73 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>R7 Software</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font: 15px/1.45 system-ui, sans-serif;
-      color: #111;
-      background: #d8d8d8;
-    }
-    .page {
-      max-width: 960px;
-      margin: 24px auto;
-      background: #fff;
-      border: 2px solid #333;
-    }
-    .label {
-      font-size: 11px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: #666;
-      margin-bottom: 6px;
-    }
-    .box {
-      border: 1px dashed #666;
-      background: #f4f4f4;
-      padding: 12px 14px;
-    }
-    header.nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 14px 20px;
-      border-bottom: 2px solid #333;
-    }
-    .nav-links { display: flex; gap: 18px; color: #333; flex-wrap: wrap; }
-    .nav-links a { color: inherit; text-decoration: none; border-bottom: 1px solid #999; }
-    .hero {
-      padding: 28px 20px 32px;
-      border-bottom: 2px solid #333;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 16px;
-      align-items: stretch;
-    }
-    @media (max-width: 720px) {
-      .hero-grid { grid-template-columns: 1fr; }
-    }
-    .eyebrow { font-size: 13px; color: #444; }
-    h1 {
-      margin: 8px 0 12px;
-      font-size: 40px;
-      line-height: 1.1;
-      font-weight: 700;
-    }
-    .subhead { margin: 0 0 16px; max-width: 36em; }
-    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
-    .btn {
-      border: 2px solid #111;
-      padding: 10px 14px;
-      font-weight: 600;
-      background: #fff;
-      color: #111;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn.primary { background: #111; color: #fff; }
-    .hero-art {
-      min-height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #555;
-    }
-    section.block {
-      padding: 22px 20px;
-      border-bottom: 2px solid #333;
-    }
-    section.block h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
-    }
-    footer {
-      padding: 18px 20px 22px;
-      display: grid;
-      gap: 8px;
-      background: #eee;
-    }
-    .note {
-      max-width: 960px;
-      margin: 0 auto 12px;
-      padding: 0 8px;
-      font-size: 13px;
-      color: #333;
-    }
-  </style>
+  <meta name="description" content="R7 Software. Indie game studio developing Rollout X1." />
+  <link rel="icon" href="/assets/r7-mark.webp" type="image/webp" />
+  <link rel="stylesheet" href="/site.css" />
 </head>
 <body>
-  <p class="note">Wireframe only. Gray boxes are structure. Not final art, type, or color.</p>
-  <div class="page">
-    <header class="nav">
-      <div>
-        <div class="label">Nav · logo</div>
-        <div class="box" style="display:inline-block; padding:8px 12px;"><strong>R7</strong></div>
-      </div>
-      <div>
-        <div class="label">Nav · links</div>
-        <div class="nav-links box">
-          <a href="/rollout-x1/">Rollout X1</a>
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
-        </div>
-      </div>
-    </header>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/">
+        <picture>
+          <source srcset="/assets/r7-mark.webp" type="image/webp" />
+          <img class="brand-mark" src="/assets/r7-mark.jpg" width="40" height="40" alt="R7" />
+        </picture>
+        <span class="brand-text">
+          <span class="brand-name">R7</span>
+          <span class="brand-tag">Indie game studio</span>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="/rollout-x1/">Rollout X1</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main>
     <section class="hero">
-      <div class="label">Hero</div>
-      <div class="hero-grid">
-        <div class="box">
-          <div class="eyebrow">R7 Software · Indie game studio</div>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">R7 Software · Indie game studio</p>
           <h1>Rollout X1</h1>
           <p class="subhead">Spherical drones that engage in high-speed, multiplayer physics-based combat. Transform to roll, walk, slide, and fly across the battlefield!</p>
           <div class="actions">
-            <a class="btn primary" href="https://discord.gg/DkkR2hb">Follow development</a>
+            <a class="btn btn-primary" href="https://discord.gg/DkkR2hb">Follow development</a>
             <a class="btn" href="/rollout-x1/">About the game</a>
           </div>
         </div>
-        <div class="box hero-art">
-          [Hero key art / screenshot]<br />
-          <span style="font-size:12px;">Placeholder until we pick a Rollout frame</span>
+        <div class="art-slot" role="img" aria-label="Key art placeholder">
+          Key art coming soon
         </div>
       </div>
     </section>
 
-    <section class="block">
-      <div class="label">Studio strip</div>
-      <div class="box">
-        <h2>R7 Software</h2>
-        <p style="margin:0;">Indie game studio focused on innovative mechanics. Currently developing Rollout X1.</p>
+    <section class="studio">
+      <div class="wrap studio-inner">
+        <picture>
+          <source srcset="/assets/r7-logo.webp" type="image/webp" />
+          <img class="studio-logo" src="/assets/r7-logo.jpg" width="72" height="67" alt="" />
+        </picture>
+        <div>
+          <h2>R7 Software</h2>
+          <p>Indie game studio focused on innovative mechanics. Currently developing Rollout X1.</p>
+        </div>
       </div>
     </section>
+  </main>
 
-    <footer>
-      <div class="label">Footer</div>
-      <div class="box">
-        © R7 Software<br />
-        <a href="mailto:contact@r7.software">contact@r7.software</a><br />
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>© R7 Software</div>
+      <div class="footer-links">
+        <a href="mailto:contact@r7.software">contact@r7.software</a>
         <a href="https://discord.gg/DkkR2hb">Discord</a>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </body>
 </html>

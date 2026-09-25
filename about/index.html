@@ -4,10 +4,53 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About · R7 Software</title>
+  <meta name="description" content="About R7 Software, an indie game studio developing Rollout X1." />
+  <link rel="icon" href="/assets/r7-mark.webp" type="image/webp" />
+  <link rel="stylesheet" href="/site.css" />
 </head>
-<body style="font:16px/1.5 system-ui; max-width:40em; margin:2rem auto; padding:0 1rem;">
-  <p><a href="/">← R7</a></p>
-  <h1>About</h1>
-  <p>Indie game studio focused on innovative mechanics. Currently developing Rollout X1.</p>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="/">
+        <picture>
+          <source srcset="/assets/r7-mark.webp" type="image/webp" />
+          <img class="brand-mark" src="/assets/r7-mark.jpg" width="40" height="40" alt="R7" />
+        </picture>
+        <span class="brand-text">
+          <span class="brand-name">R7</span>
+          <span class="brand-tag">Indie game studio</span>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="/rollout-x1/">Rollout X1</a></li>
+          <li><a href="/about/" aria-current="page">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="wrap">
+      <h1>About</h1>
+      <p class="lead">Indie game studio focused on innovative mechanics. Currently developing Rollout X1.</p>
+      <p>R7 Software builds games around inventive systems and high-skill play. Follow Rollout X1 development on Discord.</p>
+      <div class="actions" style="margin-top:1.5rem;">
+        <a class="btn btn-primary" href="https://discord.gg/DkkR2hb">Follow development</a>
+        <a class="btn" href="/rollout-x1/">About the game</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>© R7 Software</div>
+      <div class="footer-links">
+        <a href="mailto:contact@r7.software">contact@r7.software</a>
+        <a href="https://discord.gg/DkkR2hb">Discord</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
