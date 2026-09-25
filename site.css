@@ -47,19 +47,12 @@ body {
   min-height: 100dvh;
   font: 16px/1.55 var(--font);
   color: var(--text);
-  /* Solid only — gradient lives on ::before (avoids fixed-bg scroll flicker) */
+  /* Scrolls with the page — no fixed layer, no attachment (mobile flicker) */
   background-color: #2b323a;
+  background-image: var(--bg-gradient);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   -webkit-font-smoothing: antialiased;
-}
-
-/* Viewport-locked wash without background-attachment: fixed */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: var(--bg-gradient);
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -81,8 +74,8 @@ a:hover { color: var(--accent-hover); }
   position: sticky;
   top: 0;
   z-index: 40;
-  backdrop-filter: blur(12px);
-  background: rgba(7, 8, 10, 0.9);
+  /* Solid bar — backdrop-filter often flickers the page wash on mobile scroll */
+  background: #07080a;
   border-bottom: 1px solid var(--border);
 }
 
