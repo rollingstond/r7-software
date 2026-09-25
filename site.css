@@ -36,16 +36,21 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--bg);
+  /* Match gradient bottom so overscroll never flashes near-black */
+  background-color: #2b323a;
+  min-height: 100%;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   font: 16px/1.55 var(--font);
   color: var(--text);
-  background-color: var(--bg);
+  background-color: #2b323a;
   background-image: var(--bg-gradient);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
 }
