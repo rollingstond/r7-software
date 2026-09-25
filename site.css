@@ -74,8 +74,9 @@ a:hover { color: var(--accent-hover); }
   position: sticky;
   top: 0;
   z-index: 40;
-  /* Solid bar — backdrop-filter often flickers the page wash on mobile scroll */
-  background: #07080a;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(7, 8, 10, 0.9);
   border-bottom: 1px solid var(--border);
 }
 
