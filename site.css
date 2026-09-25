@@ -5,12 +5,18 @@
   --disc-mid: #232930;
   --disc-lift: #2f3842;
   --disc-edge: #3a4450;
-  --bg: #1a1f26;
+  --bg: #07080a;
   --bg-elevated: #262d36;
   --bg-soft: #2f3842;
   --bg-gradient:
-    radial-gradient(90% 60% at 50% -5%, #3a4450 0%, transparent 55%),
-    linear-gradient(180deg, #2a313a 0%, #1f252d 42%, #161b22 100%);
+    linear-gradient(
+      180deg,
+      #050607 0%,
+      #0a0c10 28%,
+      #1a1f26 55%,
+      #232930 78%,
+      #2b323a 100%
+    );
   --border: rgba(180, 200, 220, 0.12);
   --border-strong: rgba(180, 200, 220, 0.2);
   --text: #ececf1;
@@ -64,7 +70,7 @@ a:hover { color: var(--accent-hover); }
   top: 0;
   z-index: 40;
   backdrop-filter: blur(12px);
-  background: rgba(26, 31, 38, 0.9);
+  background: rgba(7, 8, 10, 0.9);
   border-bottom: 1px solid var(--border);
 }
 
