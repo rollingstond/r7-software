@@ -47,12 +47,19 @@ body {
   min-height: 100dvh;
   font: 16px/1.55 var(--font);
   color: var(--text);
+  /* Solid only — gradient lives on ::before (avoids fixed-bg scroll flicker) */
   background-color: #2b323a;
-  background-image: var(--bg-gradient);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Viewport-locked wash without background-attachment: fixed */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--bg-gradient);
 }
 
 img { max-width: 100%; height: auto; display: block; }
